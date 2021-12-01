@@ -26,7 +26,7 @@ public class Window extends JFrame {
         this.boardCanvas.setPreferredSize(new Dimension(600, 600));
         this.mainPanel.add(boardCanvas);
 
-        // ADD COMPONENT FOR MOVE LIST (PAIN IN ASS) WTF??? SOMETIMES WORKS OTHER TIMES NO??
+        // ADD COMPONENT FOR MOVE LIST WTF??? SOMETIMES WORKS OTHER TIMES NO??
         Canvas canvas = new Canvas() {
             @Override
             public void paint(Graphics g) {
@@ -36,9 +36,8 @@ public class Window extends JFrame {
                 System.out.println("here");
             }
         };
-        canvas.setPreferredSize(new Dimension(200, 600));
+        canvas.setPreferredSize(new Dimension(300, 600));
         this.mainPanel.add(canvas);
-        canvas.paint(getGraphics());
 
         this.board = board;
     }
