@@ -1,4 +1,6 @@
-package com.christiandevenish;
+package com.christiandevenish.gui;
+
+import com.christiandevenish.Move;
 
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;

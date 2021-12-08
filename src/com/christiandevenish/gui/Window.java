@@ -1,4 +1,7 @@
-package com.christiandevenish;
+package com.christiandevenish.gui;
+
+import com.christiandevenish.Board;
+import com.christiandevenish.Game;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -12,7 +15,7 @@ public class Window extends JFrame {
     private final JPanel mainPanel;
     private final BoardCanvas boardCanvas;
 
-    public Window(Board board) {
+    public Window(Game game) {
         super("Chess");
         this.mainPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         this.mainPanel.setPreferredSize(new Dimension(900, 600));
@@ -27,7 +30,7 @@ public class Window extends JFrame {
             e.printStackTrace();
         }
 
-        this.boardCanvas = new BoardCanvas(board);
+        this.boardCanvas = new BoardCanvas(game.getBoard());
         this.boardCanvas.setPreferredSize(new Dimension(600, 600));
         this.mainPanel.add(boardCanvas);
 
@@ -36,6 +39,9 @@ public class Window extends JFrame {
         this.mainPanel.add(gameHistoryTable.getScrollPane());
 
         this.setVisible(true);
+    }
 
+    public BoardCanvas getBoardCanvas() {
+        return boardCanvas;
     }
 }

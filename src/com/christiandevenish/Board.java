@@ -1,5 +1,7 @@
 package com.christiandevenish;
 
+import com.christiandevenish.pieces.Piece;
+
 public class Board {
 
     private final int[] board;
@@ -8,4 +10,7 @@ public class Board {
         board = new int[64];
     }
 
+    public int[] getBoard() {
+        return board;
+    }
 }

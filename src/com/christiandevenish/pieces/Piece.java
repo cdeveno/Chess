@@ -1,6 +1,6 @@
-package com.christiandevenish;
+package com.christiandevenish.pieces;
 
-public class Piece {
+public abstract class Piece {
 
     public static final int NONE = 0;
 
@@ -25,5 +25,4 @@ public class Piece {
      100
      -> 101 (White King)
     */
-
 }
